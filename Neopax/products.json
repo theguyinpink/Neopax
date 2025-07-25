@@ -1,0 +1,16 @@
+[
+  {
+    "reference": 1,
+    "nom": "Mini Projecteur Portable",
+    "prix": "49,99€",
+    "photo": "https://lien-vers-image.jpg",
+    "lien": "https://amzn.to/tonlienaff"
+  },
+  {
+    "reference": 2,
+    "nom": "Lampe LED Gaming",
+    "prix": "15,90€",
+    "photo": "https://lien-image.jpg",
+    "lien": "https://s.click.aliexpress.com/autrelien"
+  }
+]
