@@ -6,59 +6,120 @@
   <title>Neopax Finds</title>
   <style>
     :root {
-  --bg: #ececea;
-  --text: #6b5848;
-  --accent: #a0e9ff;
-  --card: #ffffff;
-}
+      --bg: #f5f0ea;
+      --text: #4e433f;
+      --accent: #dcbf9e;
+      --card: #fffaf4;
+      --border: #e0d5ca;
+    }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Helvetica Neue', sans-serif;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-header h1 {
-  color: var(--text);
-  font-weight: 300;
-  margin-bottom: 40px;
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 20px;
+    }
 
-.product {
-  background: var(--card);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-.product:hover {
-  transform: translateY(-2px);
-}
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-.product img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 16px;
-}
+    header img {
+      max-width: 200px;
+      height: auto;
+    }
 
-.product a {
-  display: inline-block;
-  padding: 10px 16px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-}
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background-color: #fdfbf8;
+      color: var(--text);
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
 
+    #productsContainer {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+
+    @media (min-width: 600px) {
+      #productsContainer {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #productsContainer {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .product {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .product-info h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .product-info p {
+      margin: 6px 0;
+      font-size: 0.9rem;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      background-color: var(--accent);
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .product a:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Neopax - Top Produit ✨</h1>
+    <img src="neopax.png" alt="Neopax logo">
   </header>
 
-  <input type="text" id="searchInput" placeholder="Rechercher par nom ou par reference...">
+  <input type="text" id="searchInput" placeholder="Recherche par nom ou référence...">
 
   <div id="productsContainer"></div>
 
